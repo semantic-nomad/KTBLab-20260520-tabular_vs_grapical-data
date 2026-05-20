@@ -66,6 +66,24 @@ flowchart LR
 
 Product_A --made--> Sale_1
 Sale_1 --during--> Q1
+Sale_1 --saleAmount--> 100
+
+Product_A --made--> Sale_2
+Sale_2 --during--> Q2
+Sale_2 --saleAmount--> 150
+
+Product_B --made--> Sale_4
+Sale_4 --during--> Q1
+Sale_4 --saleAmount--> 200
+```
+
+It does get complicated quickly if we add a few types, for example.
+
+```mermaid
+flowchart LR
+
+Product_A --made--> Sale_1
+Sale_1 --during--> Q1
 Sale_1 --saleAmount--> Amount_1
 Amount_1 --value--> 100
 Amount_1 --hasDataType--> decimal
@@ -73,11 +91,15 @@ Amount_1 --currency--> USD
 
 Product_A --made--> Sale_2
 Sale_2 --during--> Q2
-Sale_2 --saleAmount--> 150
-150 --hasUnit--> USD
+Sale_2 --saleAmount--> Amount_2
+Amount_2 --value--> 150
+Amount_2 --hasDataType--> decimal
+Amount_2 --currency--> USD
 
 Product_B --made--> Sale_4
 Sale_4 --during--> Q1
-Sale_4 --saleAmount--> 200
-200 --hasUnit--> USD
+Sale_4 --saleAmount--> Amount_3
+Amount_3 --value--> 200
+Amount_3 --hasDataType--> decimal
+Amount_3 --currency--> USD
 ```
