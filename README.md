@@ -59,3 +59,25 @@ Product_B --made--> Sale_4
 Sale_4 --during--> Q1
 Sale_4 --saleAmount--> ^200 USD
 ```
+
+Can also visualize as a graph:
+```mermaid
+flowchart LR
+
+Product_A --made--> Sale_1
+Sale_1 --during--> Q1
+Sale_1 --saleAmount--> Amount_1
+Amount_1 --value--> 100
+Amount_1 --hasDataType--> decimal
+Amount_1 --currency--> USD
+
+Product_A --made--> Sale_2
+Sale_2 --during--> Q2
+Sale_2 --saleAmount--> 150
+150 --hasUnit--> USD
+
+Product_B --made--> Sale_4
+Sale_4 --during--> Q1
+Sale_4 --saleAmount--> 200
+200 --hasUnit--> USD
+```
